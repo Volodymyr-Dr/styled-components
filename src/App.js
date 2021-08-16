@@ -7,10 +7,8 @@ import SignIn from './components/SignIn';
 function App() {
   return (
     <div className="App">
-  
       <Link className="link link_button" to="/sign-in">Sign In</Link>
       <Link className="link link_button" to="/sign-up">Sign Up</Link>
-      
       <Switch>
         <Route path="/sign-in" component={SignIn}/>
         <Route path="/sign-up" component={SignUp}/>
