@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {Switch, Route, Link} from 'react-router-dom';
+
 import SignIn from './SignIn';
 import {ManeBox, Input, Button, TitleForm, TextCheck, BoxCheck, Copyright} from './MyComp.ui'
 
@@ -65,7 +66,7 @@ const SignUp = () => {
     localStorage.setItem("lastName", LastName);
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);
-    alert("Вітаю! Ви зареєстровані!")
+    alert("Вітаю! Ви зареєстровані!");
   }
 
     return( 
@@ -110,7 +111,7 @@ const SignUp = () => {
         /><TextCheck>I want to receive inspiration, marketing <br/>  
         promotions and updates via email</TextCheck></BoxCheck>
         <br/>
-        <Button onClick={saveInLocal}>SIGN UP</Button>
+        <Button type="submit" onClick={saveInLocal}>SIGN UP</Button>
       </form>
       <Link className="link" to="/sign-in">Already have an account? Sign In</Link>
       <Copyright>Copyright 	&copy; Your Website 2021.</Copyright>

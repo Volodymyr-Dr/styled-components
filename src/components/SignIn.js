@@ -1,5 +1,6 @@
 import React, { useEffect, useState }  from 'react';
 import {Switch, Route, Link} from 'react-router-dom';
+
 import SignUp from './SignUp';
 import {ManeBox, Input, Button, TitleForm, TextCheck, BoxCheck, Copyright} from './MyComp.ui'
 
@@ -9,10 +10,8 @@ const margin = {
 };
 
 const SignIn = () => {
-
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  
   
   useEffect(() =>{
     if (localStorage.saveEmail) {
@@ -28,7 +27,6 @@ const SignIn = () => {
     localStorage.setItem("sevePassword", password);
   }
   
-
   const chekingInput = () => {
     const logEm = localStorage.getItem('email');
     const inputEm = document.getElementById('email');
@@ -88,7 +86,6 @@ const SignIn = () => {
           id="password"
           type="password"
           placeholder="Password"
-          // value={password}
           onChange={passwordHandler}
         />
         <br/>
